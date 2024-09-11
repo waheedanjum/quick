@@ -44,6 +44,7 @@ export class AlertService {
 
     if (Array.isArray(data)) {
       for (const message of data) {
+        console.log(data);
         const msgObject = Utilities.splitInTwo(message, separatorOrDetail ?? '');
 
         this.showMessageHelper(msgObject.firstPart, msgObject.secondPart, severity, false);
